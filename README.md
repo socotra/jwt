@@ -6,8 +6,8 @@ Demo:
 
 ```
 # brew install nodejs ## if necessary
-npx @socotra/jwt # and follow prompts
-### the output will contain no secret
+npx @socotra/jwt -- inspect --login
+# clean info, interactive prompts
 ```
 
 ## dev

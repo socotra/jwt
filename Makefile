@@ -8,7 +8,7 @@ clean:
 .PHONY: clean
 
 demo: test
-	npx @socotra/jwt "$(shell jwt)"
+	npx @socotra/jwt -- inspect "$(shell jwt)"
 .PHONY: demo
 
 node_modules: package.json
