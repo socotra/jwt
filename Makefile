@@ -7,8 +7,8 @@ clean:
 	git clean -dix
 .PHONY: clean
 
-demo: test
-	npx @socotra/jwt -- inspect "$(shell jwt)"
+demo:
+	npx @socotra/jwt --debug inspect --login
 .PHONY: demo
 
 node_modules: package.json
@@ -24,6 +24,7 @@ sane: node_modules
 
 test: sane
 	docker build "--tag=$(DOCKER_IMAGE_TAG)" -- .
-	docker run --rm -it -- "$(DOCKER_IMAGE_TAG)"
-	@docker push "$(DOCKER_IMAGE_TAG)" # demo
+	docker run --init --interactive --user=node --rm --tty \
+		-- "$(DOCKER_IMAGE_TAG)" npx @socotra/jwt --debug inspect --login
+	@docker push -- "$(DOCKER_IMAGE_TAG)"
 .PHONY: test
