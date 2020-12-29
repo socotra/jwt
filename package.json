@@ -1,0 +1,37 @@
+{
+  "name": "@socotra/jwt",
+  "version": "0.1.0",
+  "description": "Tools for working w/ account credentials (and JWTs)",
+  "homepage": "https://github.com/socotra/jwt#readme",
+  "license": "MIT",
+  "main": "lib/main.js",
+  "bugs": {
+    "url": "https://github.com/socotra/jwt/issues"
+  },
+  "dependencies": {
+    "chalk": "4.1.0",
+    "commander": "6.2.1",
+    "inquirer": "7.3.3"
+  },
+  "devDependencies": {
+    "eslint": "7.16.0",
+    "eslint-config-prettier": "7.1.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-mocha": "8.0.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "3.3.0",
+    "mocha": "8.2.1",
+    "nyc": "15.1.0",
+    "prettier": "2.2.1"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/socotra/jwt.git"
+  },
+  "scripts": {
+    "test": "eslint ."
+  }
+}
