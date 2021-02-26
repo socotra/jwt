@@ -1,6 +1,6 @@
 Ready to deploy to a Socotra sandbox tenant? Give this a try:
 
-````
+```
 $ npx github:socotra/jwt#main help
 Usage: npx @socotra/jwt [options] <command> [args] # see: ... help <command>
 
