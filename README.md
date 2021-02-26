@@ -1,6 +1,6 @@
-# jwt
+# @socotra/jwt
 
-Tools for working w/ account credentials (and JWTs)
+Tools for working w/ Socotra accounts (credentials and JWTs)
 
 Demo:
 
