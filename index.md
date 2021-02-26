@@ -1,4 +1,4 @@
-Ready to deploy to a Socotra sandbox tenant? Give this a try:
+Welcome! Got your sandbox tenant deployed? Give this a try:
 
 ```
 $ npx github:socotra/jwt#main help
@@ -16,8 +16,10 @@ Commands:
   help [command]             display help for command
 ```
 
-The difference between `npx @socotra/jwt` and `npx github:socotra/jwt#main` is whether it uses
-1. the latest local version (if cached, else: will pull from default=NPM registry)
-2. GitHub's `main` branch version (will prompt for confirmation)
+The difference between `npx @socotra/jwt` and `npx github:socotra/jwt#main` is whether
+1. it'll use the latest local version (if cached, else: from default=NPM registry)
+2. GitHub's `main` branch version (will prompt for confirmation first)
 
-When you've got your credentials ready, run: `npx github:socotra/jwt#main login --tenant=$TENANT_HOSTNAME`
+Got your Socotra credentials ready?
+
+Run: `npx github:socotra/jwt#main login --tenant=$TENANT_HOSTNAME`
