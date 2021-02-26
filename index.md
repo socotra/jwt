@@ -23,3 +23,11 @@ The difference between `npx @socotra/jwt` and `npx github:socotra/jwt#main` is w
 Got your Socotra credentials ready?
 
 Run: `npx github:socotra/jwt#main login --tenant=$TENANT_HOSTNAME`
+
+## Troubleshooting
+
+NodeJS comes bundled with the `npm` and `npx` tools.
+
+On macOS, with `brew` you can: `brew install nodejs`
+
+File an issue (bug) or pull request (fix) on GitHub if you have any contributions. Thanks!
