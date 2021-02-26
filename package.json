@@ -15,16 +15,21 @@
     "chalk": "4.1.0",
     "commander": "6.2.1",
     "debug": "4.3.1",
+    "dotenv": "8.2.0",
     "inquirer": "7.3.3",
-    "node-fetch": "2.6.1"
+    "njwt": "1.0.0",
+    "node-fetch": "2.6.1",
+    "zxcvbn": "4.4.2"
   },
   "devDependencies": {
-    "eslint": "7.16.0",
-    "eslint-config-prettier": "7.1.0",
+    "cross-env": "7.0.3",
+    "eslint": "7.19.0",
+    "eslint-config-prettier": "7.2.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-mocha": "8.0.0",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "3.3.0",
+    "eslint-plugin-prettier": "3.3.1",
+    "jest": "26.6.3",
     "mocha": "8.2.1",
     "nyc": "15.1.0",
     "prettier": "2.2.1"
@@ -33,14 +38,25 @@
     "node": ">=14"
   },
   "prettier": {
+    "quoteProps": "as-needed",
+    "semi": false,
     "singleQuote": true,
-    "semi": false
+    "trailingComma": "all"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/socotra/jwt.git"
   },
   "scripts": {
-    "test": "eslint ."
+    "precoverage": "nyc -- mocha",
+    "coverage": "nyc report --reporter=html",
+    "postcoverage": "nyc check-coverage --lines=0",
+    "lint": "eslint",
+    "prereport": "eslint --fix -- .",
+    "report": "npm run coverage",
+    "postreport": "eslint --max-warnings=0 -- .",
+    "start": "make test # TODO: w/ docker",
+    "pretest": "echo TODO: use jest?",
+    "test": "npm run report"
   }
 }
