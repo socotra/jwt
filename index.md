@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+Ready to deploy to a Socotra sandbox tenant? Give this a try:
 
-You can use the [editor on GitHub](https://github.com/socotra/jwt/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+````
+$ npx github:socotra/jwt#main help
+Usage: npx @socotra/jwt [options] <command> [args] # see: ... help <command>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Options:
+  -d, --debug                enable DEBUG=* logging
+  -v, --verbose              enable verbose output
+  -V, --version              print CLI version
+  -h, --help                 display help for command
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Commands:
+  inspect [options] [token]
+  login [options] [env]
+  help [command]             display help for command
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+The difference between `npx @socotra/jwt` and `npx github:socotra/jwt#main` is whether it uses
+1. the latest version in NPM's registry
+2. GitHub's `main` branch version
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/socotra/jwt/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+When you've got your credentials ready, run: `npx github:socotra/jwt#main login`
