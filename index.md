@@ -20,4 +20,4 @@ The difference between `npx @socotra/jwt` and `npx github:socotra/jwt#main` is w
 1. the latest version in NPM's registry
 2. GitHub's `main` branch version
 
-When you've got your credentials ready, run: `npx github:socotra/jwt#main login`
+When you've got your credentials ready, run: `npx github:socotra/jwt#main login --tenant=$TENANT_HOSTNAME`
