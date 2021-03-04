@@ -1,4 +1,4 @@
-Welcome! Deploy [your playground](https://studio.sandbox.socotra.com) tenant in Socotra's sandbox, then give this a try:
+Welcome! Deploy [your playground](https://studio.sandbox.socotra.com) tenant in Socotra's `sandbox` env, then give this a try:
 
 ```
 $ npx github:socotra/jwt#main help
@@ -16,17 +16,17 @@ Commands:
   help [command]             display help for command
 ```
 
-The difference between `npx @socotra/jwt` and `npx github:socotra/jwt#main` is whether
-1. it'll use the latest local version (if cached, else: from default=NPM registry)
-2. GitHub's `main` branch version (will prompt for confirmation first)
+The difference between `npx @socotra/jwt` and `npx github:socotra/jwt#main` is whether:
+1. to use the [published version](https://www.npmjs.com/package/@socotra/jwt) (or local cache, pulled from NPM's default registry)
+2. or, use GitHub's `main` [branch version](https://github.com/socotra/jwt/tree/main) (latest code, will prompt for confirmation)
 
-Got your Socotra credentials ready?
+## Quick Start
 
-Run: `npx github:socotra/jwt#main login --tenant=$TENANT_HOSTNAME`
+If you haven't already deployed a playground tenant, use your [evaluation credentials](https://docs.socotra.com/production/configuration/gsg.html) and then:
 
-Where `TENANT_HOSTNAME` is: `$ADMIN_USERNAME-configeditor.co.sandbox.socotra.com`
+To acquire a token for your `alice.lee` test user: `npx github:socotra/jwt#main login --tenant=$TENANT_HOSTNAME`
 
-The default configuration names a test user named `alice.lee` with password: `socotra`
+(where `TENANT_HOSTNAME` is: `$ADMIN_USERNAME-configeditor.co.sandbox.socotra.com` by default)
 
 ## Troubleshooting
 
