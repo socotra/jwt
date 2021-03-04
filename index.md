@@ -1,4 +1,4 @@
-Welcome! Got your sandbox tenant deployed? Give this a try:
+Welcome! Deploy [your playground](https://studio.sandbox.socotra.com) tenant in Socotra's sandbox, then give this a try:
 
 ```
 $ npx github:socotra/jwt#main help
@@ -24,10 +24,14 @@ Got your Socotra credentials ready?
 
 Run: `npx github:socotra/jwt#main login --tenant=$TENANT_HOSTNAME`
 
+Where `TENANT_HOSTNAME` is: `$ADMIN_USERNAME-configeditor.co.sandbox.socotra.com`
+
+The default configuration names a test user named `alice.lee` with password: `socotra`
+
 ## Troubleshooting
 
-NodeJS comes bundled with the `npm` and `npx` tools.
+Missing npx? [NodeJS](https://nodejs.org) comes bundled with the `npm` and `npx` tools.
 
-On macOS, with `brew` you can: `brew install nodejs`
+On macOS, with [Brew](https://brew.sh) you can just: `brew install nodejs` to provide `npx`
 
-File an issue (bug) or pull request (fix) on GitHub if you have any contributions. Thanks!
+File an issue (bug) or pull request (fix) on GitHub if you would like to contribute. Thanks!
