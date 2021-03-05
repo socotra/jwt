@@ -24,7 +24,7 @@ The difference between `npx @socotra/jwt` and `npx github:socotra/jwt#main` is w
 
 If you haven't already deployed, use your [evaluation credentials](https://docs.socotra.com/production/configuration/gsg.html).
 
-Then, to acquire a token for your `alice.lee` test user on your playground tenant:
+Then, to acquire a token for `alice.lee` (or, any test employee) on your playground tenant:
 ```
 npx github:socotra/jwt#main login --tenant=$TENANT_HOSTNAME
 # where TENANT_HOSTNAME is: $TENANT_NAME.co.sandbox.socotra.com
