@@ -22,11 +22,15 @@ The difference between `npx @socotra/jwt` and `npx github:socotra/jwt#main` is w
 
 ## Quick Start
 
-If you haven't already deployed a playground tenant, use your [evaluation credentials](https://docs.socotra.com/production/configuration/gsg.html) and then:
+If you haven't already deployed, use your [evaluation credentials](https://docs.socotra.com/production/configuration/gsg.html).
 
-To acquire a token for your `alice.lee` test user: `npx github:socotra/jwt#main login --tenant=$TENANT_HOSTNAME`
-
-(where `TENANT_HOSTNAME` is: `$ADMIN_USERNAME-configeditor.co.sandbox.socotra.com` by default)
+Then, to acquire a token for your `alice.lee` test user on your playground tenant:
+```
+npx github:socotra/jwt#main login --tenant=$TENANT_HOSTNAME
+# where TENANT_HOSTNAME is: $TENANT_NAME.co.sandbox.socotra.com
+# and a TENANT_NAME equals: $CONFIG_STUDIO_USERNAME-configeditor
+# (which the standard tenant management UI deployed via sandbox.socotra.com)
+```
 
 ## Troubleshooting
 
