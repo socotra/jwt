@@ -23,16 +23,16 @@
   },
   "devDependencies": {
     "cross-env": "7.0.3",
-    "eslint": "7.20.0",
+    "eslint": "7.21.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-mocha": "8.0.0",
+    "eslint-plugin-mocha": "8.1.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "3.3.1",
-    "jest": "26.6.3",
-    "mocha": "8.3.0",
+    "mocha": "8.3.1",
     "nyc": "15.1.0",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "serve": "11.3.2"
   },
   "engines": {
     "node": ">=14"
@@ -51,12 +51,11 @@
     "precoverage": "nyc -- mocha",
     "coverage": "nyc report --reporter=html",
     "postcoverage": "nyc check-coverage --lines=0",
-    "lint": "eslint",
-    "prereport": "eslint --fix -- .",
+    "lint": "eslint lib test",
+    "prereport": "npm run lint -- --fix",
     "report": "npm run coverage",
-    "postreport": "eslint --max-warnings=0 -- .",
-    "start": "make test # TODO: w/ docker",
-    "pretest": "echo TODO: use jest?",
+    "postreport": "npm run lint -- --max-warnings=0",
+    "start": "npm test && serve coverage",
     "test": "npm run report"
   }
 }
