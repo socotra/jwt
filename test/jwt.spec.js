@@ -1,16 +1,17 @@
-/* globals describe, it */
+/* eslint-env mocha, node */
 const assert = require('assert')
 const crypto = require('crypto')
 
 const JWT = require('../lib/jwt.js')
 
 const rsaPublic = (key, type = 'pkcs1') => {
+  const format = 'pem'
   const pub = crypto.createPublicKey({
-    format: 'pem',
+    format,
     key,
   })
   return pub.export({
-    format: 'pem',
+    format,
     type,
   })
 }
@@ -36,7 +37,7 @@ describe('lib', function () {
     assert.deepStrictEqual(actual, expected)
   })
 
-  it('supports RSA key pairs, too', function () {
+  it('supports RSA key pairs, too (for JWTs)', function () {
     const secret = JWT._genKey('RS256')
     const shared = rsaPublic(secret)
     const input = {
