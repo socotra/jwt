@@ -1,6 +1,6 @@
 {
   "name": "@socotra/jwt",
-  "version": "next",
+  "version": "1.1.0-demo",
   "description": "Tools for working w/ account credentials (and JWTs)",
   "homepage": "https://github.com/socotra/jwt#readme",
   "license": "MIT",
